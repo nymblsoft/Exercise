@@ -1,0 +1,5 @@
+<ul>
+    <li ng-repeat="person in $ctrl.people | filter:$ctrl.data">
+      <a href="#!/main/{{person.name}}">{{person.name}}</a>
+    </li>
+  </ul>

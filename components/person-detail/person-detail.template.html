@@ -1,0 +1,30 @@
+
+  <div class="person-detail-top">
+    <img class="person-detail-img" src="{{person.img}}" />
+    <div class="person-detail-send-message">
+      <button class="btn btn-secondary person-detail-send-message-button" type="button">SEND MESSAGE</button>
+      <div class="person-detail-rating">
+        <div ng-if="rating.currentVal>0" star-rating rating-value="rating.currentVal" max="rating.max" on-rating-selected="getSelectedRating(rating)"></div>
+      </div>
+    </div>
+    <div class="alert alert-info">
+      {{person.Description}}
+    </div>
+
+    <div class="row" style="position:relative">
+      <div class="col-sm-6">
+        <strong>Likes</strong>
+        <div ng-repeat="like in person.Likes">
+          {{like}}
+
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <strong>Dislikes</strong>
+        <div ng-repeat="dislike in person.Dislikes">
+          {{dislike}}
+        </div>
+      </div>
+    </div>
+
+  </div>

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  
+  <!--Top Panel-->
+  <search data="$ctrl.query"></search>
+  
+  
+        <div class="row">
+          <!--Left Panel-->
+          <person-list data="$ctrl.query" class="col-sm-4"></person-list>
+      
+          <!--Body content-->
+          <person-detail ng-if="$ctrl.personId" class="col-sm-8"></person-detail>  
+        </div>
+        
+     
+  </div>
+</div>
